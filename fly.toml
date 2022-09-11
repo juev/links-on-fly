@@ -1,0 +1,25 @@
+# fly.toml file generated for links-on-fly on 2022-09-11T09:25:50+03:00
+
+app = "links-on-fly"
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[build]
+  image = "sissbruecker/linkding:latest" # latest is the most recent stable release
+
+[env]
+
+# persist data
+[[mounts]]
+  destination = "/etc/linkding/data"
+  source = "data"
+
+[[services]]
+  internal_port = 9090
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
