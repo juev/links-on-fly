@@ -61,7 +61,6 @@ If you wish, you can [configure a custom domain for your install](https://fly.io
 ## Verify the installation
 
  - you should be able to log into your linkding instance.
- - there should be an initial replica of your database in your B2 bucket.
  - your user data should survive a restart of the VM.
 
 

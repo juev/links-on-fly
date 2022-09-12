@@ -5,9 +5,6 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
-[build]
-  image = "sissbruecker/linkding:latest" # latest is the most recent stable release
-
 [env]
 
 # persist data
